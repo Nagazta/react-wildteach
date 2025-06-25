@@ -3,8 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './Pages/LandingPage';
 import LoginPage from './Pages/LoginPage';
 import RegisterPage from './Pages/RegisterPage';
+
+//Student pages
 import StudentDashboard from './Pages/StudentPage/StudentDashboard';
+
+//Tutor pages
 import TutorDashboard from './Pages/TutorPage/TutorDashboard';
+import Sessions from './Pages/TutorPage/Sessions';
 
 // Admin pages
 import AdminDashboard from './Pages/AdminPage/AdminDashboard';
@@ -24,9 +29,12 @@ function App() {
         <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/register" element={<RegisterPage />} />
 
-        {/* User Dashboards */}
+        {/* Student Dashboards */}
         <Route path="/studentDashboard" element={<StudentDashboard />} />
-        <Route path="/tutorDashboard" element={<TutorDashboard />} />
+
+        {/*Tutor Routes*/}
+        <Route path="/tutor/dashboard" element={<TutorDashboard />} />
+        <Route path="/tutor/manageSessions" element={<Sessions />} />
 
         {/* Admin Routes */}
         <Route path="/adminDashboard" element={<AdminDashboard />} />

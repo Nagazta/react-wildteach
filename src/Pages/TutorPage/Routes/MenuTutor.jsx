@@ -1,5 +1,5 @@
 export default (navigate) => [
-  { text: "Home", onClick: () => navigate('/tutor/home') },
+  { text: "Home", onClick: () => navigate('/tutor/dashboard') },
   { text: "Manage Sessions", onClick: () => navigate('/tutor/manageSessions') },
   { text: "Profile", onClick: () => navigate('/tutor/profile') },
   { text: "Contact Us", onClick: () => navigate('/tutor/contactUs') },

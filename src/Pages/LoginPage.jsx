@@ -37,7 +37,7 @@ function LoginPage({ setIsLoggedIn }) {
     if (role === "admin") {
       navigate("/adminDashboard");
     } else if (role === "tutor") {
-      navigate("/tutorDashboard");
+      navigate("/tutor/dashboard");
     } else {
       navigate("/studentDashboard");
     }
