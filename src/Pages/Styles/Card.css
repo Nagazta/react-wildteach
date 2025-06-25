@@ -1,0 +1,121 @@
+/* src/Pages/Styles/TutorPage.css */
+.tutor-dashboard {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf2;
+  min-height: 100vh;
+}
+
+.dashboard-header h2 {
+  font-size: 32px;
+  color: #8d2f2f;
+  font-weight: bold;
+}
+
+.dashboard-header p {
+  color: #5b2121;
+  margin-bottom: 30px;
+}
+
+.card-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.schedule-activity {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.schedule-box,
+.activity-box {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.schedule-list,
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.schedule-list li,
+.activity-list li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badge {
+  font-size: 12px;
+  border-radius: 12px;
+  padding: 3px 8px;
+  margin-left: 10px;
+  color: white;
+}
+
+.confirmed {
+  background-color: #4caf50;
+}
+
+.pending {
+  background-color: #f8c400;
+  color: #5b2121;
+}
+
+.done {
+  background-color: #5cb85c;
+}
+
+.upcoming {
+  background-color: #f39c12;
+}
+
+.add-btn,
+.see-all-btn {
+  background-color: #8d2f2f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.add-btn:hover,
+.see-all-btn:hover {
+  background-color: #a94343;
+}
+
+.avatar {
+  background: #f8c400;
+  color: #8d2f2f;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.avatar-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #89343B, #F8C400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 10px;
+}

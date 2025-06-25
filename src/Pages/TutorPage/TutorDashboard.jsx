@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from '../../Components/Sidebar';
+import Header from '../../Components/Header';
 import menuTutor from './Routes/MenuTutor';
-import GroupIcon from '@mui/icons-material/Group';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import Card from '../../Components/Card';
+import { FaUserGraduate, FaMoneyBillWave, FaClock, FaCheckCircle } from 'react-icons/fa';
 import WavingHandIcon from '@mui/icons-material/WavingHand';
-
-import Header from '../../Components/Header'; 
 import '../Styles/TutorPage.css';
 
 const TutorDashboard = () => {
@@ -31,7 +28,7 @@ const TutorDashboard = () => {
       <Sidebar menuItems={menuTutor(navigate)} />
 
       <div className="content">
-        <Header tutorName={tutorName} /> {/* ✅ Merged Header */}
+        <Header tutorName={tutorName} />
 
         <header className="greeting-section">
           <div className="greeting-avatar">
@@ -43,27 +40,11 @@ const TutorDashboard = () => {
           </div>
         </header>
 
-        <div className="stat-grid">
-          <div className="stat-block orange">
-            <GroupIcon className="stat-icon" />
-            <h2>{stats.students}</h2>
-            <p>Students</p>
-          </div>
-          <div className="stat-block purple">
-            <MonetizationOnIcon className="stat-icon" />
-            <h2>₱{stats.earnings}</h2>
-            <p>Earnings</p>
-          </div>
-          <div className="stat-block yellow">
-            <HourglassBottomIcon className="stat-icon" />
-            <h2>{stats.bookings}</h2>
-            <p>Pending</p>
-          </div>
-          <div className="stat-block green">
-            <CheckCircleIcon className="stat-icon" />
-            <h2>{stats.sessions}</h2>
-            <p>Sessions</p>
-          </div>
+        <div className="card-grid">
+          <Card icon={<FaUserGraduate size={28} color="#8d2f2f" />} title="Students" content={stats.students} />
+          <Card icon={<FaMoneyBillWave size={28} color="#8d2f2f" />} title="Earnings" content={`₱${stats.earnings}`} />
+          <Card icon={<FaClock size={28} color="#8d2f2f" />} title="Pending" content={stats.bookings} />
+          <Card icon={<FaCheckCircle size={28} color="#8d2f2f" />} title="Sessions" content={stats.sessions} />
         </div>
 
         <div className="dashboard-panels">
